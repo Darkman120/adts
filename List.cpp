@@ -19,15 +19,21 @@ class List::Node //self-referential Node class
 List::~List()
 {
     while(num_elements > 0)
-      remove(1);
+      removeAt(1);
 }
 	
 int List::size()
  {
     return num_elements;
  }
+ 
+ // write a getAt function
+ int List::getAt()
+ {
+	 return
+ }
 
-void List::insert(int val, int k)
+void List::insertAt(int val, int k)
 {
 	if (k < 1 or k > num_elements +1) //if the location is invalid
 	     throw out_of_range("List::insert("+to_string(val)+", " +to_string(k)+") failed. (valid indices are 1 to "+to_string(num_elements+1)+")");//throw an "out_of_range" exception
@@ -59,7 +65,7 @@ void List::insert(int val, int k)
      num_elements++;
  }
 
-void List::remove(int k)
+void List::removeAt(int k)
 {
 	if (k < 1 or k > num_elements)//if the location is invalid 
 	     throw out_of_range("List::remove(" +to_string(k)+") failed. (valid indices are 1 to "+to_string(num_elements)+")");//throw an "out_of_range" exception
