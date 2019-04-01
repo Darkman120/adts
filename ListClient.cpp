@@ -19,6 +19,8 @@ for (int i=0; i<10; i++)
 	int x=2;
 	L2.insertAt(x, i+1);
 }
-cout<< L1.getAt(2);
+
+cout<< L1.getAt(3)<<" , ";
 cout<< L2.getAt(2);
+cout<< endl <<endl;
 }

@@ -27,10 +27,24 @@ int List::size()
     return num_elements;
  }
  
- // write a getAt function
- int List::getAt()
+ int List::getAt(int k)
  {
-	 return
+	 Node* newPtr = new Node;
+	 int tally = 1;
+	 
+	 newPtr = frontPtr;
+	 while (newPtr != nullptr)
+	 {
+		 if (tally == k)
+		 {
+			 return newPtr-> data;
+		 }
+		 newPtr = newPtr-> link;
+		 
+	 }
+	 
+	 return -1;
+		 
  }
 
 void List::insertAt(int val, int k)
@@ -96,6 +110,7 @@ void List::removeAt(int k)
 	delete delPtr;
 	num_elements--;
 	}
-	
+
+
 	//Implementations of missing operations
 	
